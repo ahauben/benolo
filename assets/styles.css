@@ -433,12 +433,12 @@ section { padding-block: clamp(3.2rem, 7vw, 6rem); }
    Brand logo (image) — kept small and elegant
    ============================================================ */
 .brand { display: inline-flex; align-items: center; gap: 0; letter-spacing: normal; }
-.brand-logo { height: 46px; width: auto; display: block; }
+.brand-logo { height: 34px; width: auto; display: block; }
 .foot-brand { margin-bottom: 0.6rem; }
-.foot-logo { height: 82px; width: auto; display: block; }
+.foot-logo { height: 60px; width: auto; display: block; }
 .brand-lockup { text-align: center; padding: 0.6rem 0; }
-.brand-lockup img { height: 110px; width: auto; margin: 0 auto; }
-@media (max-width: 560px) { .brand-logo { height: 40px; } }
+.brand-lockup img { height: 88px; width: auto; margin: 0 auto; }
+@media (max-width: 560px) { .brand-logo { height: 30px; } }
 
 /* botanical hero accent */
 .sprig-accent { position:absolute; right:-20px; bottom:-30px; width:240px; color:var(--spruce); opacity:.10; pointer-events:none; }
