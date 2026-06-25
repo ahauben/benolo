@@ -1,0 +1,639 @@
+/* ============================================================
+   BENOLO — i18n engine + dictionary (FR / NL / EN)
+   Default language: FR. Choice persisted in localStorage.
+   Usage in HTML:
+     <h1 data-i18n="home.title"></h1>
+     <p data-i18n-html="home.lede_html"></p>
+     <input data-i18n-ph="join.name_ph">
+   ============================================================ */
+
+const T = {
+  fr: {
+    /* ---- nav / footer ---- */
+    "nav.home": "Accueil",
+    "nav.why": "Pourquoi le NOLO",
+    "nav.legal": "Cadre légal",
+    "nav.fed": "Fédérations",
+    "nav.join": "Adhérer",
+    "nav.cta": "Adhésion gratuite",
+
+    "foot.tagline": "La fédération belge des producteurs de boissons sans alcool et à faible teneur en alcool.",
+    "foot.nav": "Navigation",
+    "foot.about": "La fédération",
+    "foot.contact": "Contact",
+    "foot.legalpages": "Statut juridique",
+    "foot.rights": "ASBL en cours de constitution · Bruxelles",
+    "foot.note": "Site informatif. Les chiffres cités renvoient à leurs sources publiques.",
+
+    /* ---- home ---- */
+    "home.eyebrow": "Bruxelles · No & Low",
+    "home.title_html": "Une catégorie nouvelle&nbsp;: <em>une voix</em> pour la porter.",
+    "home.lede": "Le sans-alcool premium n'est plus une niche. BENOLO réunit les producteurs belges de boissons no & low pour faire reconnaître, défendre et structurer leur catégorie — face aux régulateurs, à la distribution et au grand public.",
+    "home.cta1": "Rejoindre — c'est gratuit",
+    "home.cta2": "Pourquoi le NOLO",
+    "home.zero_tag": "Le repère de la catégorie",
+    "home.zero_big_html": "0<span>.</span>0",
+    "home.zero_p": "Zéro alcool, sans rien céder sur le goût, le plaisir ni l'occasion. C'est la promesse que nos membres tiennent, verre après verre.",
+
+    "home.intro_eyebrow": "Ce qu'est BENOLO",
+    "home.intro_title": "Seuls, nous sommes des marques. Ensemble, nous sommes une catégorie.",
+    "home.intro_p": "Le vin et les spiritueux ont leurs fédérations depuis des décennies. Le no & low, lui, a grandi vite — mais sans voix collective. BENOLO comble ce vide : un point de contact unique pour les autorités, un poids réel face à la distribution, et une promotion structurée de la catégorie auprès des consommateurs.",
+
+    "home.m_eyebrow": "Notre mission",
+    "home.m_title": "Quatre engagements",
+    "home.m1_k": "01",
+    "home.m1_h": "Représenter",
+    "home.m1_p": "Porter une voix commune sur les dossiers réglementaires qui nous concernent : étiquetage, Nutri-Score, accises, allégations « 0.0 », définitions légales.",
+    "home.m2_k": "02",
+    "home.m2_h": "Peser",
+    "home.m2_p": "Renforcer le poids du secteur dans les négociations avec la grande distribution et l'horeca, et ouvrir l'accès aux linéaires.",
+    "home.m3_k": "03",
+    "home.m3_h": "Promouvoir",
+    "home.m3_p": "Faire connaître la catégorie auprès des consommateurs et des prescripteurs, autour du mindful drinking et du flexidrinking.",
+    "home.m4_k": "04",
+    "home.m4_h": "Relier",
+    "home.m4_p": "Créer un espace d'échange entre producteurs, des marques installées aux jeunes venus, et avec les fédérations sœurs à l'étranger.",
+
+    "home.stat_eyebrow": "Le mouvement, en chiffres",
+    "home.s1_lab": "de nouveaux consommateurs no-alcool dans le monde en 2024 vs 2022",
+    "home.s1_src": "IWSR, 2024",
+    "home.s2_lab": "des consommateurs des dix premiers marchés modèrent leur consommation d'alcool",
+    "home.s2_src": "IWSR Speakeasy",
+    "home.s3_lab": "les lancements de boissons sans alcool croissent cinq fois plus vite que les boissons alcoolisées en Europe",
+    "home.s3_src": "Innova Market Insights",
+
+    "home.quote": "« Seul, on est faible. Ensemble, on est fort. »",
+    "home.quote_attr": "— le constat qui a fondé toutes les fédérations de boissons. Le no & low ne fait pas exception.",
+
+    "home.cta_title": "Devenez membre fondateur",
+    "home.cta_p": "L'adhésion est entièrement gratuite en phase de lancement. Notre priorité : rassembler largement pour bâtir une fédération réellement représentative.",
+    "home.cta_btn": "Compléter le formulaire",
+
+    /* ---- why ---- */
+    "why.eyebrow": "Pourquoi le NOLO",
+    "why.title": "L'alcool a un coût. Le no & low ouvre une autre voie.",
+    "why.lede": "Le débat sur l'alcool n'est pas qu'une question de santé individuelle. Il touche les finances publiques, l'économie et la société tout entière. Voici ce que disent les données — et la place qu'y prend une catégorie en pleine croissance.",
+
+    "why.h_fin": "Finances publiques",
+    "why.fin_p": "En Belgique, le coût social des substances addictives (alcool, tabac, drogues, médicaments psychoactifs) a été estimé à 4,6 milliards d'euros pour 2012, soit 419 € par habitant ou 1,19 % du PIB. L'alcool et le tabac y pèsent le plus lourd. Ces montants reposent sur des dépenses de soins, des pertes de productivité et des coûts intangibles.",
+    "why.fin_s1": "coût social des substances addictives en Belgique (2012)",
+    "why.fin_s1_src": "Lievens et al., 2017",
+    "why.fin_s2": "du PIB belge",
+    "why.fin_s2_src": "même étude",
+    "why.fin_s3": "de coûts directs attribuables à l'alcool, dont 82 % d'hospitalisations",
+    "why.fin_s3_src": "BMC Public Health, 2017",
+
+    "why.h_health": "Santé",
+    "why.health_p": "Les coûts directs de soins attribuables à l'alcool en Belgique ont été estimés à 906,1 millions d'euros pour la seule année 2012, dont 82 % liés aux hospitalisations ; les coûts indirects (dont la mortalité prématurée) à 642,6 millions. Les autorités sanitaires, de l'OMS aux agences nationales, convergent désormais sur un message simple : sur le plan du risque, seul le niveau zéro est sans danger.",
+    "why.health_q": "Réduire la consommation, ce n'est pas priver : c'est offrir un choix éclairé pour chaque occasion.",
+
+    "why.h_eco": "Économie",
+    "why.eco_p": "Là où l'alcool pèse sur les budgets publics, le no & low crée de la valeur. Le marché mondial des boissons sans et à faible teneur en alcool est estimé à plus de 13 milliards de dollars et devrait gagner plusieurs milliards d'ici 2028. Surtout, cette croissance est additive : en 2024, le segment sans alcool a recruté quelque 61 millions de nouveaux consommateurs dans le monde — des occasions et des clients nouveaux, pas un simple transfert.",
+    "why.eco_l1": "Une croissance largement incrémentale : 92 % des acheteurs de no-alcool achètent aussi des produits alcoolisés.",
+    "why.eco_l2": "Une catégorie premium : les vins effervescents sans alcool se vendent en moyenne plus cher que leurs équivalents alcoolisés.",
+    "why.eco_l3": "Des emplois locaux, de l'innovation, et de nouveaux canaux ouverts par l'absence de restrictions liées à l'alcool.",
+
+    "why.h_culture": "Un changement culturel de fond",
+    "why.culture_p": "Le « sober curious » est devenu un mode de vie, pas une mode passagère. Les jeunes générations mènent le mouvement : la modération s'installe, le « zebra striping » — alterner verres alcoolisés et sans alcool — se généralise, et boire sans alcool envoie désormais un signal positif sur soi. Pour les producteurs belges, c'est une fenêtre d'opportunité historique.",
+    "why.culture_cta": "Voir comment d'autres pays l'accompagnent",
+
+    /* ---- legal ---- */
+    "legal.eyebrow": "Cadre légal",
+    "legal.title": "Comment la fédération est construite",
+    "legal.lede": "BENOLO s'inspire du modèle éprouvé des fédérations sectorielles belges — à l'image de Vinum et Spiritus pour les vins et spiritueux — en l'adaptant aux spécificités du no & low.",
+
+    "legal.h_form": "Forme juridique",
+    "legal.form_p": "BENOLO est constituée en association sans but lucratif (ASBL / VZW) de droit belge, régie par le Code des sociétés et des associations (CSA). Cette forme garantit l'absence de but lucratif, une gouvernance collégiale et la transparence comptable attendue d'une fédération sectorielle.",
+
+    "legal.h_object": "Objet social",
+    "legal.object_p": "La fédération a pour objet de représenter, défendre et promouvoir les intérêts des producteurs et acteurs de la filière des boissons sans alcool et à faible teneur en alcool en Belgique. Cela inclut, sans s'y limiter :",
+    "legal.object_l1": "la représentation du secteur auprès des autorités fédérales, régionales et européennes ;",
+    "legal.object_l2": "le suivi et l'influence des dossiers réglementaires (étiquetage, allégations, Nutri-Score, accises, définitions légales du « 0.0 ») ;",
+    "legal.object_l3": "la promotion structurelle de la catégorie et d'une consommation consciente (mindful drinking) ;",
+    "legal.object_l4": "l'échange d'informations, les services et l'accompagnement opérationnel des membres.",
+
+    "legal.h_gov": "Gouvernance",
+    "legal.gov_p": "À l'image des fédérations établies, BENOLO s'articule autour d'une assemblée générale des membres, d'un conseil d'administration et d'une présidence, appuyés par une petite équipe opérationnelle. Le conseil fixe la stratégie de long terme ; l'assemblée approuve les comptes et les orientations.",
+    "legal.gov_ag": "Assemblée générale",
+    "legal.gov_ag_p": "L'organe souverain. Chaque membre y dispose d'une voix. Elle approuve les comptes, le budget et les grandes orientations.",
+    "legal.gov_ca": "Conseil d'administration",
+    "legal.gov_ca_p": "Élu par l'assemblée. Il définit la stratégie, représente la fédération et coordonne les groupes de travail.",
+    "legal.gov_pr": "Présidence & équipe",
+    "legal.gov_pr_p": "Porte la voix du secteur au quotidien, anime le dialogue avec les membres et assure l'exécution.",
+
+    "legal.h_members": "Catégories de membres",
+    "legal.members_p": "Sur le modèle de Vinum et Spiritus, qui réunit producteurs, négociants-importateurs-embouteilleurs et filiales de groupes internationaux, BENOLO ouvre l'adhésion à l'ensemble de la chaîne :",
+    "legal.mem1_h": "Producteurs",
+    "legal.mem1_p": "Distilleries et fabricants de boissons sans alcool et à faible teneur en alcool établis en Belgique.",
+    "legal.mem2_h": "Négoce & distribution",
+    "legal.mem2_p": "Importateurs, embouteilleurs et distributeurs de produits no & low sur le marché belge.",
+    "legal.mem3_h": "Membres associés",
+    "legal.mem3_p": "Fournisseurs, prestataires et partenaires de la filière partageant les objectifs de la fédération.",
+
+    "legal.h_funding": "Financement & indépendance",
+    "legal.funding_p": "En phase de lancement, l'adhésion est gratuite. La fédération vise à terme un financement par cotisations de membres, garantissant son indépendance vis-à-vis de tout acteur unique. Les comptes annuels sont soumis à l'assemblée générale et déposés conformément à la loi.",
+    "legal.disclaimer": "Cette page décrit l'architecture envisagée à titre informatif. Les statuts définitifs prévaudront une fois déposés au greffe. Elle ne constitue pas un avis juridique.",
+
+    /* ---- fed ---- */
+    "fed.eyebrow": "Fédérations actives à l'étranger",
+    "fed.title": "Le mindful drinking est déjà structuré ailleurs",
+    "fed.lede": "Au Royaume-Uni, aux États-Unis et à l'échelle européenne, des organisations accompagnent depuis des années le changement des habitudes : information, modération, flexidrinking. Autant de modèles dont BENOLO s'inspire pour la Belgique.",
+
+    "fed.uk_title": "Royaume-Uni",
+    "fed.uk_p": "Marché pionnier du sober curious, le Royaume-Uni dispose de l'écosystème le plus mûr.",
+    "fed.us_title": "États-Unis",
+    "fed.eu_title": "Europe & international",
+
+    "fed.drinkaware_role": "Information & réduction des risques",
+    "fed.drinkaware_p": "Organisation caritative indépendante fondée en 2006, Drinkaware fournit conseils, outils et campagnes pour aider le public à faire des choix éclairés et réduire les méfaits de l'alcool, en partenariat avec les pouvoirs publics et l'industrie.",
+    "fed.alcoholchange_role": "Mouvement & Dry January",
+    "fed.alcoholchange_p": "À l'origine du Dry January depuis 2013, Alcohol Change UK promeut un changement durable des habitudes ; près de la moitié des participants déclarent réduire durablement leur consommation après l'événement.",
+    "fed.clubsoda_role": "Mindful drinking",
+    "fed.clubsoda_p": "Communauté dédiée au mindful drinking, Club Soda accompagne particuliers et établissements vers une offre et une consommation plus conscientes, et milite pour des descripteurs « sans alcool » plus clairs.",
+    "fed.us_org_role": "Catégorie & culture",
+    "fed.us_org_p": "Aux États-Unis — l'un des marchés les plus dynamiques — l'essor des bars sans alcool, des « third spaces » et d'une distribution dédiée structure une véritable culture de la modération, portée par marques et communautés.",
+    "fed.eu_org_role": "Marché & tendance",
+    "fed.eu_org_p": "À l'échelle européenne, les analystes (IWSR, Innova) documentent une bascule structurelle : la modération devient la norme et le no & low s'impose comme catégorie économique autonome, des observatoires aux salons spécialisés.",
+
+    "fed.lesson_title": "Ce que la Belgique peut en retenir",
+    "fed.lesson_p": "Ces modèles partagent une conviction : informer plutôt qu'interdire, accompagner le choix plutôt que culpabiliser. BENOLO entend porter cette approche en Belgique, adaptée à notre cadre fédéral et à notre marché.",
+    "fed.lesson_cta": "Rejoindre la démarche belge",
+
+    "fed.vocab_title": "Le vocabulaire du mouvement",
+    "fed.v1_t": "Mindful drinking",
+    "fed.v1_p": "Boire en pleine conscience : choisir quand, quoi et combien, plutôt que par automatisme.",
+    "fed.v2_t": "Flexidrinking",
+    "fed.v2_p": "Alterner librement entre boissons alcoolisées et sans alcool selon l'occasion.",
+    "fed.v3_t": "Zebra striping",
+    "fed.v3_p": "Au cours d'une même soirée, alterner un verre avec et un verre sans alcool.",
+    "fed.v4_t": "Sober curious",
+    "fed.v4_p": "Questionner sa consommation par curiosité et bien-être, sans nécessairement viser l'abstinence totale.",
+
+    /* ---- join ---- */
+    "join.eyebrow": "Adhésion",
+    "join.title": "Rejoignez les membres fondateurs",
+    "join.lede": "Vous produisez ou distribuez des boissons sans alcool ou à faible teneur en alcool en Belgique ? Inscrivez-vous ci-dessous. En phase de lancement, l'adhésion est entièrement gratuite.",
+    "join.free": "Gratuit — phase de lancement",
+
+    "join.step1_h": "Vous vous inscrivez",
+    "join.step1_p": "Complétez le formulaire. Quelques minutes suffisent.",
+    "join.step2_h": "Nous vous recontactons",
+    "join.step2_p": "Nous revenons vers vous avec les modalités pratiques et la date de la première assemblée.",
+    "join.step3_h": "Vous devenez fondateur",
+    "join.step3_p": "Vous rejoignez le cercle des membres qui façonnent la fédération.",
+
+    "join.form_title": "Formulaire d'adhésion",
+    "join.success": "Merci. Votre demande est prête à être envoyée. Comme ce site est statique, finalisez l'envoi via votre messagerie — le bouton ci-dessous a pré-rempli un e-mail à contact@benolo.be.",
+    "join.company": "Société",
+    "join.company_ph": "Nom de votre entreprise",
+    "join.contact": "Personne de contact",
+    "join.contact_ph": "Prénom et nom",
+    "join.email": "E-mail",
+    "join.phone": "Téléphone",
+    "join.phone_ph": "Optionnel",
+    "join.type": "Type d'activité",
+    "join.type_prod": "Producteur",
+    "join.type_dist": "Négoce / distribution",
+    "join.type_assoc": "Membre associé",
+    "join.brands": "Marques / produits",
+    "join.brands_ph": "Vos marques no & low (optionnel)",
+    "join.message": "Message",
+    "join.message_ph": "Une question, un mot sur votre activité (optionnel)",
+    "join.consent": "J'accepte d'être recontacté par BENOLO au sujet de mon adhésion. Mes données ne seront utilisées qu'à cette fin.",
+    "join.submit": "Envoyer ma demande",
+    "join.note": "Aucun paiement n'est demandé. Vos données restent confidentielles et ne sont pas partagées.",
+    "join.alt": "Vous préférez écrire directement ? ",
+    "join.alt_link": "contact@benolo.be",
+  },
+
+  nl: {
+    "nav.home": "Home",
+    "nav.why": "Waarom NOLO",
+    "nav.legal": "Juridisch kader",
+    "nav.fed": "Federaties",
+    "nav.join": "Lid worden",
+    "nav.cta": "Gratis lidmaatschap",
+
+    "foot.tagline": "De Belgische federatie van producenten van alcoholvrije en alcoholarme dranken.",
+    "foot.nav": "Navigatie",
+    "foot.about": "De federatie",
+    "foot.contact": "Contact",
+    "foot.legalpages": "Juridisch statuut",
+    "foot.rights": "VZW in oprichting · Brussel",
+    "foot.note": "Informatieve website. De vermelde cijfers verwijzen naar hun publieke bronnen.",
+
+    "home.eyebrow": "Brussel · No & Low",
+    "home.title_html": "Een nieuwe categorie. <em>Eén stem</em> om ze te dragen.",
+    "home.lede": "Premium alcoholvrij is geen niche meer. BENOLO verenigt de Belgische producenten van no- & low-dranken om hun categorie te laten erkennen, verdedigen en structureren — tegenover regelgevers, retail en het grote publiek.",
+    "home.cta1": "Word lid — gratis",
+    "home.cta2": "Waarom NOLO",
+    "home.zero_tag": "Het ijkpunt van de categorie",
+    "home.zero_big_html": "0<span>.</span>0",
+    "home.zero_p": "Nul alcohol, zonder in te boeten op smaak, plezier of gelegenheid. Dat is de belofte die onze leden waarmaken, glas na glas.",
+
+    "home.intro_eyebrow": "Wat BENOLO is",
+    "home.intro_title": "Alleen zijn we merken. Samen zijn we een categorie.",
+    "home.intro_p": "Wijn en gedistilleerd hebben al decennia hun federaties. No & low groeide snel — maar zonder gezamenlijke stem. BENOLO vult die leemte: één aanspreekpunt voor de overheid, echt gewicht tegenover de retail en een gestructureerde promotie van de categorie bij de consument.",
+
+    "home.m_eyebrow": "Onze missie",
+    "home.m_title": "Vier engagementen",
+    "home.m1_k": "01",
+    "home.m1_h": "Vertegenwoordigen",
+    "home.m1_p": "Eén stem voeren over de regelgevende dossiers die ons aangaan: etikettering, Nutri-Score, accijnzen, « 0.0 »-claims, wettelijke definities.",
+    "home.m2_k": "02",
+    "home.m2_h": "Wegen",
+    "home.m2_p": "Het gewicht van de sector versterken in onderhandelingen met retail en horeca, en de toegang tot de rekken openen.",
+    "home.m3_k": "03",
+    "home.m3_h": "Promoten",
+    "home.m3_p": "De categorie bekendmaken bij consumenten en voorschrijvers, rond mindful drinking en flexidrinking.",
+    "home.m4_k": "04",
+    "home.m4_h": "Verbinden",
+    "home.m4_p": "Een uitwisselingsruimte creëren tussen producenten — van gevestigde merken tot nieuwkomers — en met zusterfederaties in het buitenland.",
+
+    "home.stat_eyebrow": "De beweging in cijfers",
+    "home.s1_lab": "nieuwe alcoholvrije consumenten wereldwijd in 2024 t.o.v. 2022",
+    "home.s1_src": "IWSR, 2024",
+    "home.s2_lab": "van de consumenten in de tien grootste markten matigt zijn alcoholgebruik",
+    "home.s2_src": "IWSR Speakeasy",
+    "home.s3_lab": "lanceringen van alcoholvrije dranken groeien vijf keer sneller dan alcoholische in Europa",
+    "home.s3_src": "Innova Market Insights",
+
+    "home.quote": "« Alleen ben je zwak. Samen sta je sterk. »",
+    "home.quote_attr": "— de vaststelling die aan de basis ligt van elke drankenfederatie. No & low is geen uitzondering.",
+
+    "home.cta_title": "Word stichtend lid",
+    "home.cta_p": "Het lidmaatschap is volledig gratis tijdens de opstartfase. Onze prioriteit: breed verzamelen om een echt representatieve federatie te bouwen.",
+    "home.cta_btn": "Vul het formulier in",
+
+    "why.eyebrow": "Waarom NOLO",
+    "why.title": "Alcohol heeft een prijs. No & low opent een andere weg.",
+    "why.lede": "Het alcoholdebat gaat niet enkel over individuele gezondheid. Het raakt de openbare financiën, de economie en de hele samenleving. Dit zeggen de data — en de plaats die een snelgroeiende categorie daarin inneemt.",
+
+    "why.h_fin": "Openbare financiën",
+    "why.fin_p": "In België werd de maatschappelijke kost van verslavende middelen (alcohol, tabak, drugs, psychoactieve medicatie) voor 2012 geraamd op 4,6 miljard euro, ofwel 419 € per inwoner of 1,19 % van het bbp. Alcohol en tabak wegen daarin het zwaarst. Die bedragen omvatten zorguitgaven, productiviteitsverlies en immateriële kosten.",
+    "why.fin_s1": "maatschappelijke kost van verslavende middelen in België (2012)",
+    "why.fin_s1_src": "Lievens et al., 2017",
+    "why.fin_s2": "van het Belgische bbp",
+    "why.fin_s2_src": "zelfde studie",
+    "why.fin_s3": "directe kosten toe te schrijven aan alcohol, waarvan 82 % ziekenhuisopnames",
+    "why.fin_s3_src": "BMC Public Health, 2017",
+
+    "why.h_health": "Gezondheid",
+    "why.health_p": "De directe zorgkosten toe te schrijven aan alcohol in België werden voor alleen al 2012 geraamd op 906,1 miljoen euro, waarvan 82 % gelinkt aan ziekenhuisopnames; de indirecte kosten (waaronder vroegtijdige sterfte) op 642,6 miljoen. Gezondheidsautoriteiten, van de WHO tot nationale agentschappen, convergeren intussen op één boodschap: qua risico is enkel het nulniveau zonder gevaar.",
+    "why.health_q": "Minderen is geen ontzegging: het is een geïnformeerde keuze bieden voor elke gelegenheid.",
+
+    "why.h_eco": "Economie",
+    "why.eco_p": "Waar alcohol op de overheidsbudgetten weegt, creëert no & low waarde. De wereldmarkt voor alcoholvrije en alcoholarme dranken wordt geraamd op meer dan 13 miljard dollar en zou tegen 2028 nog enkele miljarden groeien. Vooral: die groei is additief — in 2024 wierf het alcoholvrije segment zo'n 61 miljoen nieuwe consumenten wereldwijd, nieuwe gelegenheden en klanten, geen loutere verschuiving.",
+    "why.eco_l1": "Grotendeels incrementele groei: 92 % van de kopers van alcoholvrij koopt ook alcoholische producten.",
+    "why.eco_l2": "Een premiumcategorie: alcoholvrije mousserende dranken verkopen gemiddeld duurder dan hun alcoholische tegenhangers.",
+    "why.eco_l3": "Lokale jobs, innovatie en nieuwe kanalen die opengaan door het wegvallen van alcoholgebonden beperkingen.",
+
+    "why.h_culture": "Een diepe culturele verschuiving",
+    "why.culture_p": "« Sober curious » is een levensstijl geworden, geen voorbijgaande hype. Jongere generaties leiden de beweging: matiging zet zich door, « zebra striping » — afwisselen tussen alcoholische en alcoholvrije glazen — wordt courant, en alcoholvrij drinken stuurt voortaan een positief signaal over jezelf. Voor de Belgische producenten is dat een historisch venster.",
+    "why.culture_cta": "Zie hoe andere landen het begeleiden",
+
+    "legal.eyebrow": "Juridisch kader",
+    "legal.title": "Hoe de federatie is opgebouwd",
+    "legal.lede": "BENOLO baseert zich op het beproefde model van de Belgische sectorfederaties — naar het voorbeeld van Vinum et Spiritus voor wijn en gedistilleerd — toegepast op de eigenheid van no & low.",
+
+    "legal.h_form": "Rechtsvorm",
+    "legal.form_p": "BENOLO is opgericht als vereniging zonder winstoogmerk (VZW / ASBL) naar Belgisch recht, geregeld door het Wetboek van vennootschappen en verenigingen (WVV). Die vorm waarborgt het belangeloze doel, een collegiaal bestuur en de boekhoudkundige transparantie die van een sectorfederatie wordt verwacht.",
+
+    "legal.h_object": "Maatschappelijk doel",
+    "legal.object_p": "De federatie heeft tot doel de belangen van de producenten en spelers in de keten van alcoholvrije en alcoholarme dranken in België te vertegenwoordigen, te verdedigen en te bevorderen. Dit omvat onder meer:",
+    "legal.object_l1": "de vertegenwoordiging van de sector bij federale, regionale en Europese overheden;",
+    "legal.object_l2": "de opvolging en beïnvloeding van regelgevende dossiers (etikettering, claims, Nutri-Score, accijnzen, wettelijke « 0.0 »-definities);",
+    "legal.object_l3": "de structurele promotie van de categorie en van bewust drinken (mindful drinking);",
+    "legal.object_l4": "de uitwisseling van informatie, diensten en operationele ondersteuning van de leden.",
+
+    "legal.h_gov": "Bestuur",
+    "legal.gov_p": "Naar het voorbeeld van de gevestigde federaties draait BENOLO rond een algemene vergadering van de leden, een raad van bestuur en een voorzitterschap, ondersteund door een klein operationeel team. De raad bepaalt de langetermijnstrategie; de vergadering keurt de rekeningen en de oriëntaties goed.",
+    "legal.gov_ag": "Algemene vergadering",
+    "legal.gov_ag_p": "Het soevereine orgaan. Elk lid heeft er één stem. Ze keurt de rekeningen, het budget en de grote oriëntaties goed.",
+    "legal.gov_ca": "Raad van bestuur",
+    "legal.gov_ca_p": "Verkozen door de vergadering. Bepaalt de strategie, vertegenwoordigt de federatie en coördineert de werkgroepen.",
+    "legal.gov_pr": "Voorzitterschap & team",
+    "legal.gov_pr_p": "Draagt dagelijks de stem van de sector, voedt de dialoog met de leden en zorgt voor de uitvoering.",
+
+    "legal.h_members": "Ledencategorieën",
+    "legal.members_p": "Naar het model van Vinum et Spiritus, dat producenten, handelaars-importeurs-bottelaars en filialen van internationale groepen verenigt, stelt BENOLO het lidmaatschap open voor de hele keten:",
+    "legal.mem1_h": "Producenten",
+    "legal.mem1_p": "Distilleerderijen en fabrikanten van alcoholvrije en alcoholarme dranken gevestigd in België.",
+    "legal.mem2_h": "Handel & distributie",
+    "legal.mem2_p": "Importeurs, bottelaars en distributeurs van no- & low-producten op de Belgische markt.",
+    "legal.mem3_h": "Geassocieerde leden",
+    "legal.mem3_p": "Leveranciers, dienstverleners en partners van de keten die de doelstellingen van de federatie delen.",
+
+    "legal.h_funding": "Financiering & onafhankelijkheid",
+    "legal.funding_p": "Tijdens de opstartfase is het lidmaatschap gratis. De federatie streeft op termijn naar financiering via ledenbijdragen, wat haar onafhankelijkheid van elke individuele speler waarborgt. De jaarrekening wordt aan de algemene vergadering voorgelegd en neergelegd conform de wet.",
+    "legal.disclaimer": "Deze pagina beschrijft de beoogde architectuur ter informatie. De definitieve statuten gelden zodra ze ter griffie zijn neergelegd. Dit vormt geen juridisch advies.",
+
+    "fed.eyebrow": "Actieve federaties in het buitenland",
+    "fed.title": "Mindful drinking is elders al gestructureerd",
+    "fed.lede": "In het Verenigd Koninkrijk, de Verenigde Staten en op Europees niveau begeleiden organisaties al jaren de verandering van gewoonten: informatie, matiging, flexidrinking. Modellen waar BENOLO zich voor België door laat inspireren.",
+
+    "fed.uk_title": "Verenigd Koninkrijk",
+    "fed.uk_p": "Pioniersmarkt van de sober curious, met het meest volgroeide ecosysteem.",
+    "fed.us_title": "Verenigde Staten",
+    "fed.eu_title": "Europa & internationaal",
+
+    "fed.drinkaware_role": "Informatie & risicobeperking",
+    "fed.drinkaware_p": "Onafhankelijke liefdadigheidsorganisatie opgericht in 2006. Drinkaware biedt advies, tools en campagnes om het publiek te helpen geïnformeerde keuzes te maken en alcoholschade te beperken, in samenwerking met overheid en industrie.",
+    "fed.alcoholchange_role": "Beweging & Dry January",
+    "fed.alcoholchange_p": "Aan de oorsprong van Dry January sinds 2013 bevordert Alcohol Change UK een duurzame verandering van gewoonten; bijna de helft van de deelnemers verklaart na het event blijvend te minderen.",
+    "fed.clubsoda_role": "Mindful drinking",
+    "fed.clubsoda_p": "Gemeenschap gewijd aan mindful drinking. Club Soda begeleidt particulieren en horeca naar een bewuster aanbod en gebruik, en ijvert voor duidelijkere « alcoholvrij »-aanduidingen.",
+    "fed.us_org_role": "Categorie & cultuur",
+    "fed.us_org_p": "In de VS — een van de meest dynamische markten — structureert de opkomst van alcoholvrije bars, « third spaces » en een aparte distributie een echte matigingscultuur, gedragen door merken en gemeenschappen.",
+    "fed.eu_org_role": "Markt & trend",
+    "fed.eu_org_p": "Op Europese schaal documenteren analisten (IWSR, Innova) een structurele kanteling: matiging wordt de norm en no & low vestigt zich als autonome economische categorie, van observatoria tot vakbeurzen.",
+
+    "fed.lesson_title": "Wat België eruit kan leren",
+    "fed.lesson_p": "Deze modellen delen één overtuiging: informeren in plaats van verbieden, de keuze begeleiden in plaats van schuld aanpraten. BENOLO wil die aanpak naar België brengen, aangepast aan ons federale kader en onze markt.",
+    "fed.lesson_cta": "Sluit je aan bij de Belgische aanpak",
+
+    "fed.vocab_title": "Het vocabulaire van de beweging",
+    "fed.v1_t": "Mindful drinking",
+    "fed.v1_p": "Bewust drinken: kiezen wanneer, wat en hoeveel, in plaats van uit automatisme.",
+    "fed.v2_t": "Flexidrinking",
+    "fed.v2_p": "Vrij afwisselen tussen alcoholische en alcoholvrije dranken naargelang de gelegenheid.",
+    "fed.v3_t": "Zebra striping",
+    "fed.v3_p": "Tijdens dezelfde avond een glas met en een glas zonder alcohol afwisselen.",
+    "fed.v4_t": "Sober curious",
+    "fed.v4_p": "Je consumptie bevragen uit nieuwsgierigheid en welzijn, zonder noodzakelijk volledige onthouding na te streven.",
+
+    "join.eyebrow": "Lidmaatschap",
+    "join.title": "Word stichtend lid",
+    "join.lede": "Produceer of distribueer je alcoholvrije of alcoholarme dranken in België? Schrijf je hieronder in. Tijdens de opstartfase is het lidmaatschap volledig gratis.",
+    "join.free": "Gratis — opstartfase",
+
+    "join.step1_h": "Je schrijft je in",
+    "join.step1_p": "Vul het formulier in. Een paar minuten volstaan.",
+    "join.step2_h": "Wij nemen contact op",
+    "join.step2_p": "We komen bij je terug met de praktische modaliteiten en de datum van de eerste vergadering.",
+    "join.step3_h": "Je wordt stichter",
+    "join.step3_p": "Je vervoegt de kring van leden die de federatie vormgeven.",
+
+    "join.form_title": "Aansluitingsformulier",
+    "join.success": "Bedankt. Je aanvraag is klaar om te verzenden. Omdat deze site statisch is, rond je het verzenden af via je mailprogramma — de knop hieronder heeft een e-mail naar contact@benolo.be voorbereid.",
+    "join.company": "Bedrijf",
+    "join.company_ph": "Naam van je onderneming",
+    "join.contact": "Contactpersoon",
+    "join.contact_ph": "Voor- en achternaam",
+    "join.email": "E-mail",
+    "join.phone": "Telefoon",
+    "join.phone_ph": "Optioneel",
+    "join.type": "Type activiteit",
+    "join.type_prod": "Producent",
+    "join.type_dist": "Handel / distributie",
+    "join.type_assoc": "Geassocieerd lid",
+    "join.brands": "Merken / producten",
+    "join.brands_ph": "Je no- & low-merken (optioneel)",
+    "join.message": "Bericht",
+    "join.message_ph": "Een vraag, een woordje over je activiteit (optioneel)",
+    "join.consent": "Ik ga ermee akkoord dat BENOLO contact met mij opneemt over mijn lidmaatschap. Mijn gegevens worden enkel daarvoor gebruikt.",
+    "join.submit": "Verstuur mijn aanvraag",
+    "join.note": "Er wordt geen betaling gevraagd. Je gegevens blijven vertrouwelijk en worden niet gedeeld.",
+    "join.alt": "Liever rechtstreeks schrijven? ",
+    "join.alt_link": "contact@benolo.be",
+  },
+
+  en: {
+    "nav.home": "Home",
+    "nav.why": "Why NOLO",
+    "nav.legal": "Legal framework",
+    "nav.fed": "Federations",
+    "nav.join": "Join",
+    "nav.cta": "Free membership",
+
+    "foot.tagline": "The Belgian federation of no- and low-alcohol beverage producers.",
+    "foot.nav": "Navigation",
+    "foot.about": "The federation",
+    "foot.contact": "Contact",
+    "foot.legalpages": "Legal status",
+    "foot.rights": "Non-profit in formation · Brussels",
+    "foot.note": "Informational site. Figures cited refer to their public sources.",
+
+    "home.eyebrow": "Brussels · No & Low",
+    "home.title_html": "A new category. <em>One voice</em> to carry it.",
+    "home.lede": "Premium alcohol-free is no longer a niche. BENOLO brings together Belgium's no- & low-alcohol producers to have their category recognised, defended and structured — before regulators, retail and the public.",
+    "home.cta1": "Join — it's free",
+    "home.cta2": "Why NOLO",
+    "home.zero_tag": "The category's reference point",
+    "home.zero_big_html": "0<span>.</span>0",
+    "home.zero_p": "Zero alcohol, with nothing given up on taste, pleasure or occasion. That's the promise our members keep, glass after glass.",
+
+    "home.intro_eyebrow": "What BENOLO is",
+    "home.intro_title": "Alone, we are brands. Together, we are a category.",
+    "home.intro_p": "Wine and spirits have had their federations for decades. No & low, meanwhile, grew fast — but without a collective voice. BENOLO fills that gap: a single point of contact for authorities, real weight with retail, and structured promotion of the category to consumers.",
+
+    "home.m_eyebrow": "Our mission",
+    "home.m_title": "Four commitments",
+    "home.m1_k": "01",
+    "home.m1_h": "Represent",
+    "home.m1_p": "Carry a common voice on the regulatory files that concern us: labelling, Nutri-Score, excise duties, « 0.0 » claims, legal definitions.",
+    "home.m2_k": "02",
+    "home.m2_h": "Carry weight",
+    "home.m2_p": "Strengthen the sector's hand in negotiations with retail and hospitality, and open up access to the shelves.",
+    "home.m3_k": "03",
+    "home.m3_h": "Promote",
+    "home.m3_p": "Build awareness of the category among consumers and prescribers, around mindful drinking and flexidrinking.",
+    "home.m4_k": "04",
+    "home.m4_h": "Connect",
+    "home.m4_p": "Create a space for exchange between producers — from established brands to newcomers — and with sister federations abroad.",
+
+    "home.stat_eyebrow": "The movement, in numbers",
+    "home.s1_lab": "new no-alcohol consumers worldwide in 2024 vs 2022",
+    "home.s1_src": "IWSR, 2024",
+    "home.s2_lab": "of consumers across the top ten markets are moderating their alcohol intake",
+    "home.s2_src": "IWSR Speakeasy",
+    "home.s3_lab": "alcohol-free drink launches are growing five times faster than alcoholic ones in Europe",
+    "home.s3_src": "Innova Market Insights",
+
+    "home.quote": "« Alone we are weak. Together we are strong. »",
+    "home.quote_attr": "— the insight behind every beverage federation. No & low is no exception.",
+
+    "home.cta_title": "Become a founding member",
+    "home.cta_p": "Membership is entirely free during the launch phase. Our priority: gather broadly to build a federation that truly represents the sector.",
+    "home.cta_btn": "Complete the form",
+
+    "why.eyebrow": "Why NOLO",
+    "why.title": "Alcohol has a cost. No & low opens another path.",
+    "why.lede": "The alcohol debate is not only about individual health. It touches public finances, the economy and society as a whole. Here is what the data say — and the place a fast-growing category takes within it.",
+
+    "why.h_fin": "Public finances",
+    "why.fin_p": "In Belgium, the social cost of addictive substances (alcohol, tobacco, drugs, psychoactive medication) was estimated at €4.6 billion for 2012 — €419 per capita, or 1.19% of GDP. Alcohol and tobacco weigh heaviest. These figures cover healthcare spending, lost productivity and intangible costs.",
+    "why.fin_s1": "social cost of addictive substances in Belgium (2012)",
+    "why.fin_s1_src": "Lievens et al., 2017",
+    "why.fin_s2": "of Belgian GDP",
+    "why.fin_s2_src": "same study",
+    "why.fin_s3": "in direct costs attributable to alcohol, 82% of it hospitalisation",
+    "why.fin_s3_src": "BMC Public Health, 2017",
+
+    "why.h_health": "Health",
+    "why.health_p": "Direct healthcare costs attributable to alcohol in Belgium were estimated at €906.1 million for the year 2012 alone, 82% of it linked to hospitalisation; indirect costs (including premature mortality) at €642.6 million. Health authorities, from the WHO to national agencies, now converge on one message: in terms of risk, only the zero level is without danger.",
+    "why.health_q": "Cutting back isn't deprivation: it's offering an informed choice for every occasion.",
+
+    "why.h_eco": "Economy",
+    "why.eco_p": "Where alcohol weighs on public budgets, no & low creates value. The global market for no- and low-alcohol drinks is estimated at over $13 billion and is expected to add several billion more by 2028. Crucially, this growth is additive: in 2024 the no-alcohol segment recruited some 61 million new consumers worldwide — new occasions and new customers, not a simple transfer.",
+    "why.eco_l1": "Largely incremental growth: 92% of no-alcohol buyers also buy alcoholic products.",
+    "why.eco_l2": "A premium category: alcohol-free sparkling drinks sell on average at a higher price than their alcoholic equivalents.",
+    "why.eco_l3": "Local jobs, innovation, and new channels opened by the absence of alcohol-related restrictions.",
+
+    "why.h_culture": "A deep cultural shift",
+    "why.culture_p": "« Sober curious » has become a lifestyle, not a passing fad. Younger generations lead the movement: moderation is settling in, « zebra striping » — alternating alcoholic and alcohol-free drinks — is going mainstream, and drinking alcohol-free now sends a positive signal about oneself. For Belgian producers, it's a historic window.",
+    "why.culture_cta": "See how other countries support it",
+
+    "legal.eyebrow": "Legal framework",
+    "legal.title": "How the federation is built",
+    "legal.lede": "BENOLO draws on the proven model of Belgian sector federations — like Vinum et Spiritus for wine and spirits — adapted to the specifics of no & low.",
+
+    "legal.h_form": "Legal form",
+    "legal.form_p": "BENOLO is established as a non-profit association (ASBL / VZW) under Belgian law, governed by the Code of Companies and Associations (CSA). This form guarantees the non-profit purpose, collegial governance and the accounting transparency expected of a sector federation.",
+
+    "legal.h_object": "Corporate purpose",
+    "legal.object_p": "The federation's purpose is to represent, defend and promote the interests of producers and players in the no- and low-alcohol beverage chain in Belgium. This includes, but is not limited to:",
+    "legal.object_l1": "representing the sector before federal, regional and European authorities;",
+    "legal.object_l2": "monitoring and influencing regulatory files (labelling, claims, Nutri-Score, excise, legal « 0.0 » definitions);",
+    "legal.object_l3": "structural promotion of the category and of mindful drinking;",
+    "legal.object_l4": "exchange of information, services and operational support for members.",
+
+    "legal.h_gov": "Governance",
+    "legal.gov_p": "Like established federations, BENOLO is built around a general assembly of members, a board of directors and a presidency, supported by a small operational team. The board sets the long-term strategy; the assembly approves the accounts and orientations.",
+    "legal.gov_ag": "General assembly",
+    "legal.gov_ag_p": "The sovereign body. Each member has one vote. It approves the accounts, the budget and the main orientations.",
+    "legal.gov_ca": "Board of directors",
+    "legal.gov_ca_p": "Elected by the assembly. It sets strategy, represents the federation and coordinates the working groups.",
+    "legal.gov_pr": "Presidency & team",
+    "legal.gov_pr_p": "Carries the sector's voice day to day, drives dialogue with members and ensures execution.",
+
+    "legal.h_members": "Member categories",
+    "legal.members_p": "On the model of Vinum et Spiritus, which brings together producers, traders-importers-bottlers and subsidiaries of international groups, BENOLO opens membership to the whole chain:",
+    "legal.mem1_h": "Producers",
+    "legal.mem1_p": "Distilleries and makers of no- and low-alcohol beverages established in Belgium.",
+    "legal.mem2_h": "Trade & distribution",
+    "legal.mem2_p": "Importers, bottlers and distributors of no & low products on the Belgian market.",
+    "legal.mem3_h": "Associate members",
+    "legal.mem3_p": "Suppliers, service providers and partners of the chain sharing the federation's objectives.",
+
+    "legal.h_funding": "Funding & independence",
+    "legal.funding_p": "During the launch phase, membership is free. The federation aims, over time, to be funded by member dues, securing its independence from any single player. Annual accounts are submitted to the general assembly and filed in accordance with the law.",
+    "legal.disclaimer": "This page describes the envisaged architecture for information only. The final statutes will prevail once filed with the registry. It does not constitute legal advice.",
+
+    "fed.eyebrow": "Active federations abroad",
+    "fed.title": "Mindful drinking is already structured elsewhere",
+    "fed.lede": "In the UK, the US and across Europe, organisations have spent years supporting the shift in habits: information, moderation, flexidrinking. Models BENOLO draws on for Belgium.",
+
+    "fed.uk_title": "United Kingdom",
+    "fed.uk_p": "The pioneer market of sober curious, with the most mature ecosystem.",
+    "fed.us_title": "United States",
+    "fed.eu_title": "Europe & international",
+
+    "fed.drinkaware_role": "Information & harm reduction",
+    "fed.drinkaware_p": "An independent charity founded in 2006, Drinkaware provides advice, tools and campaigns to help the public make informed choices and reduce alcohol harm, in partnership with government and industry.",
+    "fed.alcoholchange_role": "Movement & Dry January",
+    "fed.alcoholchange_p": "Originator of Dry January since 2013, Alcohol Change UK promotes lasting change in habits; nearly half of participants report cutting back durably after the event.",
+    "fed.clubsoda_role": "Mindful drinking",
+    "fed.clubsoda_p": "A community devoted to mindful drinking, Club Soda guides individuals and venues towards a more conscious offer and consumption, and campaigns for clearer « alcohol-free » descriptors.",
+    "fed.us_org_role": "Category & culture",
+    "fed.us_org_p": "In the US — one of the most dynamic markets — the rise of alcohol-free bars, « third spaces » and dedicated distribution is building a genuine culture of moderation, driven by brands and communities.",
+    "fed.eu_org_role": "Market & trend",
+    "fed.eu_org_p": "Across Europe, analysts (IWSR, Innova) document a structural shift: moderation is becoming the norm and no & low is establishing itself as an autonomous economic category, from observatories to trade fairs.",
+
+    "fed.lesson_title": "What Belgium can take from it",
+    "fed.lesson_p": "These models share one conviction: inform rather than ban, support the choice rather than shame it. BENOLO intends to bring that approach to Belgium, adapted to our federal framework and our market.",
+    "fed.lesson_cta": "Join the Belgian effort",
+
+    "fed.vocab_title": "The vocabulary of the movement",
+    "fed.v1_t": "Mindful drinking",
+    "fed.v1_p": "Drinking with awareness: choosing when, what and how much, rather than out of habit.",
+    "fed.v2_t": "Flexidrinking",
+    "fed.v2_p": "Freely alternating between alcoholic and alcohol-free drinks depending on the occasion.",
+    "fed.v3_t": "Zebra striping",
+    "fed.v3_p": "Within a single evening, alternating a drink with and a drink without alcohol.",
+    "fed.v4_t": "Sober curious",
+    "fed.v4_p": "Questioning one's consumption out of curiosity and wellbeing, without necessarily aiming for full abstinence.",
+
+    "join.eyebrow": "Membership",
+    "join.title": "Join the founding members",
+    "join.lede": "Do you produce or distribute no- or low-alcohol beverages in Belgium? Sign up below. During the launch phase, membership is entirely free.",
+    "join.free": "Free — launch phase",
+
+    "join.step1_h": "You sign up",
+    "join.step1_p": "Fill in the form. A few minutes is all it takes.",
+    "join.step2_h": "We get back to you",
+    "join.step2_p": "We return with the practical details and the date of the first assembly.",
+    "join.step3_h": "You become a founder",
+    "join.step3_p": "You join the circle of members shaping the federation.",
+
+    "join.form_title": "Membership form",
+    "join.success": "Thank you. Your request is ready to send. As this site is static, complete the send via your mail client — the button below has pre-filled an email to contact@benolo.be.",
+    "join.company": "Company",
+    "join.company_ph": "Your company name",
+    "join.contact": "Contact person",
+    "join.contact_ph": "First and last name",
+    "join.email": "Email",
+    "join.phone": "Phone",
+    "join.phone_ph": "Optional",
+    "join.type": "Type of activity",
+    "join.type_prod": "Producer",
+    "join.type_dist": "Trade / distribution",
+    "join.type_assoc": "Associate member",
+    "join.brands": "Brands / products",
+    "join.brands_ph": "Your no & low brands (optional)",
+    "join.message": "Message",
+    "join.message_ph": "A question, a word about your activity (optional)",
+    "join.consent": "I agree to be contacted by BENOLO about my membership. My data will be used only for this purpose.",
+    "join.submit": "Send my request",
+    "join.note": "No payment is requested. Your data stays confidential and is not shared.",
+    "join.alt": "Prefer to write directly? ",
+    "join.alt_link": "contact@benolo.be",
+  },
+};
+
+const LANGS = ["fr", "nl", "en"];
+const DEFAULT_LANG = "fr";
+
+function getLang() {
+  const saved = localStorage.getItem("benolo-lang");
+  if (saved && LANGS.includes(saved)) return saved;
+  const nav = (navigator.language || "").slice(0, 2).toLowerCase();
+  return LANGS.includes(nav) ? nav : DEFAULT_LANG;
+}
+
+function applyLang(lang) {
+  const dict = T[lang] || T[DEFAULT_LANG];
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const v = dict[el.getAttribute("data-i18n")];
+    if (v != null) el.textContent = v;
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+    const v = dict[el.getAttribute("data-i18n-html")];
+    if (v != null) el.innerHTML = v;
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach((el) => {
+    const v = dict[el.getAttribute("data-i18n-ph")];
+    if (v != null) el.setAttribute("placeholder", v);
+  });
+  document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+    const v = dict[el.getAttribute("data-i18n-aria")];
+    if (v != null) el.setAttribute("aria-label", v);
+  });
+
+  document.querySelectorAll(".lang button").forEach((b) => {
+    b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+  });
+
+  localStorage.setItem("benolo-lang", lang);
+}
+
+function initI18n() {
+  applyLang(getLang());
+  document.querySelectorAll(".lang button").forEach((b) => {
+    b.addEventListener("click", () => applyLang(b.dataset.lang));
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initI18n);
