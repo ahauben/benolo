@@ -429,9 +429,36 @@ section { padding-block: clamp(3.2rem, 7vw, 6rem); }
 /* ============================================================
    Logo, member news, press, botanical visuals  (added)
    ============================================================ */
-.brand { gap: 0.55rem; }
-.brand-mark { height: 32px; width: auto; display: inline-block; }
-.foot-logo { height: 90px; width: auto; margin-bottom: 0.4rem; }
+/* ============================================================
+   Typographic wordmark + EN baseline  (logo image removed)
+   ============================================================ */
+.brand { flex-direction: column; align-items: flex-start; gap: 3px; letter-spacing: normal; }
+.brand-word {
+  font-family: var(--display); font-weight: 600; font-size: 1.5rem; line-height: 1;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink);
+}
+.brand-base {
+  font-family: var(--mono); font-size: 0.5rem; line-height: 1;
+  letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted);
+  padding-left: 0.14em; white-space: nowrap;
+}
+.brand-word .amp, .foot-word .amp { color: var(--zest-d); font-weight: 500; }
+
+.foot-brand { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.4rem; }
+.foot-word {
+  font-family: var(--display); font-size: 2rem; line-height: 1;
+  letter-spacing: 0.16em; text-transform: uppercase; color: #fff;
+}
+.foot-word .amp { color: var(--zest); }
+.foot-base {
+  font-family: var(--mono); font-size: 0.64rem; line-height: 1;
+  letter-spacing: 0.24em; text-transform: uppercase; color: var(--zest);
+}
+
+/* press brand lockup (on spruce) */
+.brand-lockup { text-align: center; padding: 1.4rem 0; }
+.brand-lockup .foot-word { font-size: 2.2rem; }
+.brand-lockup .foot-base { display: block; margin-top: 0.6rem; }
 
 /* botanical hero accent */
 .sprig-accent { position:absolute; right:-20px; bottom:-30px; width:240px; color:var(--spruce); opacity:.10; pointer-events:none; }
