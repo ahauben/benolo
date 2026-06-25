@@ -18,6 +18,8 @@ const T = {
     "nav.cta": "Adhésion gratuite",
     "nav.news": "Actualités",
     "nav.press": "Presse",
+    "nav.about": "À propos",
+    "nav.media": "Médias",
 
     "news.eyebrow": "Actualités des membres",
     "news.title": "Ce qui bouge chez nos membres",
@@ -283,6 +285,8 @@ const T = {
     "nav.cta": "Gratis lidmaatschap",
     "nav.news": "Nieuws",
     "nav.press": "Pers",
+    "nav.about": "Over ons",
+    "nav.media": "Media",
 
     "news.eyebrow": "Nieuws van onze leden",
     "news.title": "Wat beweegt er bij onze leden",
@@ -543,6 +547,8 @@ const T = {
     "nav.cta": "Free membership",
     "nav.news": "News",
     "nav.press": "Press",
+    "nav.about": "About",
+    "nav.media": "Media",
 
     "news.eyebrow": "News from our members",
     "news.title": "What's moving among our members",

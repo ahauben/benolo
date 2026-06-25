@@ -56,4 +56,40 @@ document.addEventListener("DOMContentLoaded", () => {
       a.setAttribute("aria-current", "page");
     }
   });
+
+  /* dropdown menus */
+  const triggers = document.querySelectorAll(".nav-trigger");
+  triggers.forEach((btn) => {
+    const dd = btn.parentElement.querySelector(".dropdown");
+    // mark parent active if a child is the current page
+    if (dd && dd.querySelector('[aria-current="page"]')) btn.classList.add("active");
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const open = dd.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(open));
+      document.querySelectorAll(".dropdown").forEach((o) => {
+        if (o !== dd) {
+          o.classList.remove("open");
+          const b = o.parentElement.querySelector(".nav-trigger");
+          if (b) b.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav-item")) {
+      document.querySelectorAll(".dropdown.open").forEach((o) => o.classList.remove("open"));
+      document.querySelectorAll('.nav-trigger[aria-expanded="true"]').forEach((b) =>
+        b.setAttribute("aria-expanded", "false")
+      );
+    }
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".dropdown.open").forEach((o) => o.classList.remove("open"));
+      document.querySelectorAll('.nav-trigger[aria-expanded="true"]').forEach((b) =>
+        b.setAttribute("aria-expanded", "false")
+      );
+    }
+  });
 });

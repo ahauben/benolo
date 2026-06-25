@@ -55,10 +55,12 @@ benolo-site/
 ├── federations.html
 ├── inscription.html
 ├── assets/
-│   ├── styles.css      ← design system (logotype typographique + baseline EN)
+│   ├── styles.css      ← design system (typo Newsreader + Inter)
 │   ├── i18n.js         ← moteur + dictionnaire FR/NL/EN
-│   ├── main.js         ← nav mobile + formulaire
-│   └── favicon.svg     ← favicon typographique (lettre B)
+│   ├── main.js         ← nav déroulante + formulaire
+│   ├── logo-full.png   ← logo couleur, fond transparent (en-tête, presse)
+│   ├── logo-foot.png   ← logo clair (pied de page / fonds sombres)
+│   └── favicon.png     ← favicon (monogramme)
 ├── CNAME               ← benolo.be
 ├── .nojekyll
 └── README.md
