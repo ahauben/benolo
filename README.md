@@ -12,6 +12,8 @@ Site statique, trilingue (FR / NL / EN), sans dépendances ni build. Prêt pour 
 | `pourquoi.html` | Pourquoi le NOLO — alcool & finances publiques, santé, économie |
 | `cadre-legal.html` | Cadre légal de la fédération (forme ASBL, objet, gouvernance) |
 | `federations.html` | Fédérations actives à l'étranger (UK / US / EU), mindful & flexidrinking |
+| `actualites.html` | Actualités des membres — vitrine des marques (visuels SVG à remplacer par des photos) |
+| `presse.html` | Espace presse — communiqué de création du 25 juin 2026 + ressources |
 | `inscription.html` | Formulaire d'adhésion (gratuit en phase de lancement) |
 
 ## Multilingue
@@ -55,7 +57,11 @@ benolo-site/
 ├── assets/
 │   ├── styles.css      ← design system
 │   ├── i18n.js         ← moteur + dictionnaire FR/NL/EN
-│   └── main.js         ← nav mobile + formulaire
+│   ├── main.js         ← nav mobile + formulaire
+│   ├── logo-mark.png   ← monogramme (en-tête, fond transparent)
+│   ├── logo-full.png   ← logo complet (téléchargement presse)
+│   ├── logo-foot.png   ← logo blanc + or (pied de page sombre)
+│   └── favicon.png     ← favicon (monogramme)
 ├── CNAME               ← benolo.be
 ├── .nojekyll
 └── README.md

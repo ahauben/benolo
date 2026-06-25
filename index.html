@@ -8,17 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,350..600;1,9..144,350..500&family=Inter:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="index.html">BENOLO<span class="dot">.</span><small>be</small></a>
+      <a class="brand" href="index.html"><img class="brand-mark" src="assets/logo-mark.png" alt="">BENOLO<span class="dot">.</span><small>be</small></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="index.html" data-i18n="nav.home"></a>
         <a href="pourquoi.html" data-i18n="nav.why"></a>
         <a href="cadre-legal.html" data-i18n="nav.legal"></a>
         <a href="federations.html" data-i18n="nav.fed"></a>
+        <a href="actualites.html" data-i18n="nav.news"></a>
+        <a href="presse.html" data-i18n="nav.press"></a>
         <a href="inscription.html" data-i18n="nav.join"></a>
       </nav>
       <div class="nav-right">
@@ -51,6 +54,15 @@
         <p data-i18n="home.zero_p"></p>
       </aside>
     </div>
+    <svg class="sprig-accent" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <path d="M40 180 C70 130 90 90 110 30"/>
+      <g stroke-width="2.6">
+        <path d="M96 60 c20-10 34-6 48-22"/><path d="M86 86 c20-10 34-6 48-22"/>
+        <path d="M76 112 c20-10 34-6 48-22"/><path d="M66 138 c18-9 30-5 44-20"/>
+        <path d="M104 50 c-18-12-32-8-46-24"/><path d="M92 78 c-18-12-32-8-46-24"/>
+        <path d="M82 104 c-18-12-32-8-46-24"/>
+      </g>
+    </svg>
   </section>
 
   <!-- INTRO -->
@@ -126,6 +138,36 @@
     </div>
   </section>
 
+  <!-- OPPORTUNITIES / JOIN THE MOVEMENT -->
+  <section>
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="home.opp_eyebrow"></span>
+      <div class="split center" style="margin:1rem 0 2.8rem;">
+        <h2 style="font-style:italic;max-width:18ch;" data-i18n="home.slogan"></h2>
+        <div class="lede-block">
+          <p data-i18n="home.opp_p"></p>
+        </div>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="num">→ 01</span>
+          <h3 data-i18n="home.opp1_h"></h3>
+          <p data-i18n="home.opp1_p"></p>
+        </div>
+        <div class="card">
+          <span class="num">→ 02</span>
+          <h3 data-i18n="home.opp2_h"></h3>
+          <p data-i18n="home.opp2_p"></p>
+        </div>
+        <div class="card">
+          <span class="num">→ 03</span>
+          <h3 data-i18n="home.opp3_h"></h3>
+          <p data-i18n="home.opp3_p"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section>
     <div class="wrap">
@@ -141,7 +183,7 @@
     <div class="wrap">
       <div class="foot-grid">
         <div>
-          <div class="foot-brand">BENOLO<span class="dot">.</span>be</div>
+          <img class="foot-logo" src="assets/logo-foot.png" alt="BENOLO Belgium">
           <p data-i18n="foot.tagline" style="max-width:38ch;margin-top:.8rem;"></p>
         </div>
         <div class="foot-col">
@@ -150,6 +192,8 @@
             <li><a href="pourquoi.html" data-i18n="nav.why"></a></li>
             <li><a href="cadre-legal.html" data-i18n="nav.legal"></a></li>
             <li><a href="federations.html" data-i18n="nav.fed"></a></li>
+            <li><a href="actualites.html" data-i18n="nav.news"></a></li>
+            <li><a href="presse.html" data-i18n="nav.press"></a></li>
             <li><a href="inscription.html" data-i18n="nav.join"></a></li>
           </ul>
         </div>

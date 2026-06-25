@@ -425,3 +425,44 @@ section { padding-block: clamp(3.2rem, 7vw, 6rem); }
   .hero h1 { font-size: var(--step-4); }
   .nav-right .btn { display: none; }
 }
+
+/* ============================================================
+   Logo, member news, press, botanical visuals  (added)
+   ============================================================ */
+.brand { gap: 0.55rem; }
+.brand-mark { height: 32px; width: auto; display: inline-block; }
+.foot-logo { height: 90px; width: auto; margin-bottom: 0.4rem; }
+
+/* botanical hero accent */
+.sprig-accent { position:absolute; right:-20px; bottom:-30px; width:240px; color:var(--spruce); opacity:.10; pointer-events:none; }
+.zero-card { z-index:1; }
+
+/* member news */
+.news-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem; }
+.news-card { background:var(--cloud); border:1px solid var(--mist); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; transition:transform .2s, box-shadow .2s, border-color .2s; }
+.news-card:hover { transform:translateY(-3px); box-shadow:0 18px 40px -24px rgba(20,40,32,.4); border-color:var(--zest); }
+.news-thumb { aspect-ratio:4/3; display:block; position:relative; }
+.news-thumb svg { width:100%; height:100%; display:block; }
+.news-body { padding:1.25rem 1.4rem 1.5rem; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+.news-meta { font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--zest-d); }
+.news-card h3 { font-size:1.15rem; margin:0; }
+.news-card p { margin:0; color:var(--muted); font-size:.95rem; }
+.news-tag { margin-top:auto; padding-top:.4rem; }
+.news-note { font-family:var(--mono); font-size:.78rem; letter-spacing:.03em; color:var(--muted); }
+
+/* press */
+.press-release { background:var(--cloud); border:1px solid var(--mist); border-radius:var(--radius); padding:clamp(1.6rem,4vw,3rem); }
+.press-kicker { font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--zest-d); display:block; }
+.press-dateline { font-family:var(--mono); font-size:.8rem; color:var(--muted); margin:.5rem 0 1.4rem; }
+.press-release h2 { font-size:var(--step-2); max-width:24ch; }
+.press-release .lead { font-size:var(--step-1); color:var(--ink); }
+.press-quote { border-left:3px solid var(--zest); padding:.4rem 0 .4rem 1.4rem; font-family:var(--display); font-size:var(--step-1); font-style:italic; color:var(--ink); margin:1.6rem 0; }
+.press-quote .attr { display:block; font-family:var(--mono); font-style:normal; font-size:.74rem; letter-spacing:.06em; color:var(--zest-d); margin-top:.7rem; text-transform:uppercase; }
+.press-boiler { border-top:1px solid var(--mist); margin-top:2rem; padding-top:1.4rem; }
+.press-boiler h3 { font-size:1.1rem; }
+.press-boiler p { color:var(--muted); font-size:.92rem; }
+.press-contact { font-family:var(--mono); font-size:.8rem; color:var(--muted); margin-top:1rem; }
+.press-side .card { margin-bottom:1.2rem; }
+
+@media (max-width:900px){ .news-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:560px){ .news-grid{grid-template-columns:1fr;} .sprig-accent{display:none;} }
