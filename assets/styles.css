@@ -557,3 +557,18 @@ section { padding-block: clamp(3.2rem, 7vw, 6rem); }
 }
 .logo-preview .fname { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
 .logo-attach { margin-top: 0.7rem; font-weight: 600; }
+
+/* ============================================================
+   Key figure inside challenge cards
+   ============================================================ */
+.card-fig { margin-top: 1.1rem; padding-top: 1rem; border-top: 1px solid var(--mist); }
+.card-fig .n {
+  font-family: var(--display); font-size: 1.95rem; line-height: 1;
+  letter-spacing: -0.01em; color: var(--spruce);
+}
+.card-fig .l { display: block; margin-top: 0.35rem; font-size: 0.82rem; color: var(--muted); }
+
+/* align challenge-card key figures to the bottom */
+.challenge-card { display: flex; flex-direction: column; }
+.challenge-card .tag-chip { align-self: flex-start; }
+.challenge-card .card-fig { margin-top: auto; }
