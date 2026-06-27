@@ -24,7 +24,7 @@ Pour modifier un texte : éditez la clé correspondante dans les trois langues d
 
 ## Formulaire d'adhésion
 
-Le site étant statique, le formulaire (`inscription.html`) compose un e-mail pré-rempli vers `contact@benolo.be` (`mailto:`). Pour collecter les inscriptions automatiquement, branchez un service de formulaire (Formspree, Netlify Forms, Tally…) en remplaçant le gestionnaire `#join-form` dans `assets/main.js`.
+Le site étant statique, le formulaire (`inscription.html`) compose un e-mail pré-rempli vers `contact@benolo.be` (`mailto:`). Le champ **logo de la société** affiche un aperçu immédiat, mais un `mailto:` ne peut pas joindre le fichier : le demandeur est invité à l'attacher à l'e-mail qui s'ouvre. Pour collecter les inscriptions **et** recevoir le logo automatiquement, branchez un service de formulaire avec upload (Formspree, Netlify Forms, Tally…) en remplaçant le gestionnaire `#join-form` dans `assets/main.js`.
 
 ## Déploiement sur GitHub Pages
 

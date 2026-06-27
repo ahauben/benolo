@@ -10,18 +10,21 @@
    ============================================================ */
 
 :root {
-  /* Palette */
-  --ink:      #15211C;   /* near-black spruce — text */
-  --spruce:   #1E4D3E;   /* primary brand green */
-  --spruce-d: #143A2E;   /* deeper green for footers / blocks */
-  --zest:     #A7D44A;   /* botanical zest accent */
-  --zest-d:   #6E9B2A;   /* zest, legible on light */
-  --amber:    #E0913B;   /* warm secondary accent */
-  --paper:    #F2F4EE;   /* cool mineral background */
-  --paper-2:  #E8ECE2;   /* slightly deeper panel */
-  --mist:     #D6DfD3;   /* sage divider / card border */
-  --cloud:    #FBFCF8;   /* near-white card surface */
-  --muted:    #5B6B62;   /* muted text */
+  /* Palette — navy marine (the 0.0 colour) + gold, institutional */
+  --ink:      #14213D;   /* navy-black — text */
+  --spruce:   #173A66;   /* primary navy (var name kept) */
+  --spruce-d: #0E2240;   /* deep navy for footers / blocks */
+  --zest:     #D4AF57;   /* gold accent (var name kept) */
+  --zest-d:   #7E5F18;   /* dark gold — legible on light */
+  --amber:    #C8923A;   /* secondary amber/gold */
+  --paper:    #F2F5F9;   /* cool mineral background */
+  --paper-2:  #E6ECF3;   /* slightly deeper panel */
+  --mist:     #D2DCE8;   /* cool divider / card border */
+  --cloud:    #FBFCFE;   /* near-white card surface */
+  --muted:    #586377;   /* muted text */
+  --be-black: #1A1A1A;   /* Belgian tricolour */
+  --be-gold:  #D4AF57;
+  --be-red:   #B23A36;
 
   /* Type */
   --display: "Newsreader", Georgia, "Times New Roman", serif;
@@ -105,6 +108,11 @@ section { padding-block: clamp(3.2rem, 7vw, 6rem); }
   background: color-mix(in srgb, var(--paper) 86%, transparent);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--mist);
+}
+.site-header::before {
+  content: ""; display: block; height: 3px;
+  background: linear-gradient(90deg,
+    var(--be-black) 0 33.33%, var(--be-gold) 33.33% 66.66%, var(--be-red) 66.66% 100%);
 }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
@@ -530,3 +538,22 @@ section { padding-block: clamp(3.2rem, 7vw, 6rem); }
   }
   .dropdown.open { display: grid; }
 }
+
+/* ============================================================
+   File upload (company logo) in the membership form
+   ============================================================ */
+.file-input { padding: 0.55rem 0.7rem; background: var(--paper); cursor: pointer; }
+.file-input::file-selector-button {
+  font-family: var(--body); font-weight: 600; font-size: 0.85rem;
+  border: 1px solid var(--spruce); background: var(--cloud); color: var(--spruce);
+  padding: 0.45rem 0.85rem; border-radius: 6px; margin-right: 0.85rem; cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.file-input::file-selector-button:hover { background: var(--spruce); color: #fff; }
+.logo-preview { margin-top: 0.85rem; display: flex; align-items: center; gap: 0.7rem; }
+.logo-preview img {
+  max-height: 60px; max-width: 150px; width: auto;
+  border: 1px solid var(--mist); border-radius: 8px; padding: 6px; background: #fff;
+}
+.logo-preview .fname { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
+.logo-attach { margin-top: 0.7rem; font-weight: 600; }

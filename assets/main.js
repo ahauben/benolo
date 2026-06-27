@@ -20,10 +20,32 @@ document.addEventListener("DOMContentLoaded", () => {
   /* membership form — static site: build a mailto */
   const form = document.querySelector("#join-form");
   if (form) {
+    // live preview of the company logo
+    const logoInput = form.querySelector("#logo");
+    const preview = document.querySelector("#logo-preview");
+    if (logoInput && preview) {
+      const pImg = preview.querySelector("img");
+      const pName = preview.querySelector(".fname");
+      logoInput.addEventListener("change", () => {
+        const file = logoInput.files && logoInput.files[0];
+        if (!file) { preview.hidden = true; return; }
+        pName.textContent = file.name;
+        if (file.type.startsWith("image/")) {
+          const reader = new FileReader();
+          reader.onload = (ev) => { pImg.src = ev.target.result; pImg.style.display = "block"; };
+          reader.readAsDataURL(file);
+        } else {
+          pImg.removeAttribute("src"); pImg.style.display = "none";
+        }
+        preview.hidden = false;
+      });
+    }
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const data = new FormData(form);
       const get = (k) => (data.get(k) || "").toString().trim();
+      const logoFile = logoInput && logoInput.files && logoInput.files[0] ? logoInput.files[0].name : "";
 
       const lines = [
         `Société / Company: ${get("company")}`,
@@ -32,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `Téléphone / Phone: ${get("phone")}`,
         `Type: ${get("type")}`,
         `Marques / Brands: ${get("brands")}`,
+        `Logo: ${logoFile ? logoFile + " (à joindre / to attach)" : "—"}`,
         ``,
         `Message:`,
         get("message"),
@@ -42,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const success = document.querySelector(".form-success");
       if (success) {
         success.classList.add("show");
+        const attach = success.querySelector(".logo-attach");
+        if (attach) attach.hidden = !logoFile;
         success.scrollIntoView({ behavior: "smooth", block: "center" });
       }
       window.location.href = `mailto:contact@benolo.be?subject=${subject}&body=${body}`;

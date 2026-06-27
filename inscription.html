@@ -95,6 +95,7 @@
 
         <div class="form-success" role="status">
           <p style="margin:0;" data-i18n="join.success"></p>
+          <p class="logo-attach" data-i18n="join.logo_attach" hidden></p>
         </div>
 
         <form id="join-form" novalidate>
@@ -127,6 +128,15 @@
           <div class="field">
             <label for="brands" data-i18n="join.brands"></label>
             <input id="brands" name="brands" type="text" data-i18n-ph="join.brands_ph">
+          </div>
+          <div class="field">
+            <label for="logo" data-i18n="join.logo"></label>
+            <input id="logo" name="logo" type="file" class="file-input" accept="image/png,image/jpeg,image/svg+xml">
+            <span class="hint" data-i18n="join.logo_hint"></span>
+            <div id="logo-preview" class="logo-preview" hidden>
+              <img alt="">
+              <span class="fname"></span>
+            </div>
           </div>
           <div class="field">
             <label for="message" data-i18n="join.message"></label>
